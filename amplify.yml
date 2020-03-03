@@ -3,11 +3,11 @@ frontend:
   phases:
     build:
       commands:
-        - ls -alR
+        - ls -al
         - cd webapp
         - npm install
         - npm run build
-        - ls -alR
+        - ls -al
   artifacts:
     baseDirectory: webapp/build
     files:
@@ -19,10 +19,10 @@ test:
   phases:
     test:
       commands:
-        - ls -alR
+        - ls -al
         - cd webapp
         - CI=true npm test
-        - ls -alR
+        - ls -al
   artifacts:
     baseDirectory: webapp/build
     files:
