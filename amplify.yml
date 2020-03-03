@@ -8,10 +8,11 @@ frontend:
         - npm install
         - npm run build
         - ls -al
+        - cd ..
+        - cp -r webapp/build .
         - ls -al build
-        - ls -al /
   artifacts:
-    baseDirectory: /
+    baseDirectory: build
     files:
       - '**/*'
   cache:
@@ -26,6 +27,6 @@ test:
         - CI=true npm test
         - ls -al
   artifacts:
-    baseDirectory: /
+    baseDirectory: build
     files:
       - '**/*'
