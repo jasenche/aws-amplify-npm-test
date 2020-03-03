@@ -8,7 +8,8 @@ frontend:
         - npm install
         - npm run build
         - ls -al
-  artifacts:
+        - ls -al build
+artifacts:
     baseDirectory: webapp/build
     files:
       - '**/*'
