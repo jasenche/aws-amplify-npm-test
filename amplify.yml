@@ -1,5 +1,4 @@
 version: 0.1
-backend:
 frontend:
   phases:
     build:
@@ -8,7 +7,7 @@ frontend:
         - npm install
         - npm run build
   artifacts:
-    baseDirectory: webapp/build
+    baseDirectory: /webapp/build
     files:
       - '**/*'
   cache:
@@ -21,6 +20,6 @@ test:
         - cd webapp
         - CI=true npm test
   artifacts:
-    baseDirectory: webapp/build
+    baseDirectory: /webapp/build
     files:
       - '**/*'
