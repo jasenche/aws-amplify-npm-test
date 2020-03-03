@@ -21,6 +21,9 @@ test:
       commands:
         - cd webapp
         - CI=true npm test
+        - rm -fr coverage
   artifacts:
     # IMPORTANT - Please verify your build output directory.
     baseDirectory: webapp/build
+    files:
+      - '**/*'    
