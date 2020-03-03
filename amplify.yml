@@ -3,11 +3,13 @@ frontend:
   phases:
     build:
       commands:
+        - ls -alR
         - cd webapp
         - npm install
         - npm run build
+        - ls -alR
   artifacts:
-    baseDirectory: /webapp/build
+    baseDirectory: webapp/build
     files:
       - '**/*'
   cache:
@@ -17,9 +19,11 @@ test:
   phases:
     test:
       commands:
+        - ls -alR
         - cd webapp
         - CI=true npm test
+        - ls -alR
   artifacts:
-    baseDirectory: /webapp/build
+    baseDirectory: webapp/build
     files:
       - '**/*'
