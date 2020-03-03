@@ -13,4 +13,5 @@ frontend:
     files:
       - '**/*'
   cache:
-    paths: []
+    paths:
+      - 'webapp/node_modules/**/*'
