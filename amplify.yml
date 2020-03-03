@@ -4,6 +4,7 @@ frontend:
     # IMPORTANT - Please verify your build commands
     build:
       commands: 
+        - cd webapp
         - npm install
         - npm run build
   artifacts:
