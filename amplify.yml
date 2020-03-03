@@ -9,8 +9,9 @@ frontend:
         - npm run build
         - ls -al
         - ls -al build
+        - ls -al /
   artifacts:
-    baseDirectory: webapp/build
+    baseDirectory: /
     files:
       - '**/*'
   cache:
@@ -25,6 +26,6 @@ test:
         - CI=true npm test
         - ls -al
   artifacts:
-    baseDirectory: webapp/build
+    baseDirectory: /
     files:
       - '**/*'
