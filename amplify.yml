@@ -21,7 +21,3 @@ test:
       commands:
         - cd webapp
         - CI=true npm test
-  artifacts:
-    baseDirectory: webapp/build
-    files:
-      - '**/*'
