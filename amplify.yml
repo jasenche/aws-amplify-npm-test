@@ -15,3 +15,13 @@ frontend:
   cache:
     paths:
       - 'webapp/node_modules/**/*'
+test:
+  phases:
+    test:
+      commands:
+        - cd webapp
+        - CI=true npm test
+  artifacts:
+    baseDirectory: webapp/build
+    files:
+      - '**/*'
