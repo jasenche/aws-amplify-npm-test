@@ -1,0 +1,27 @@
+version: 0.1
+frontend:
+  phases:
+    build:
+      commands:
+        - cd webapp
+        - npm install
+        - npm run build
+        - cd ..
+  artifacts:
+    baseDirectory: webapp/build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - webapp/node_modules/**/*
+test:
+  phases:
+    test:
+      commands:
+        - cd webapp
+        - CI=true npm test
+        - cd ..
+  artifacts:
+    baseDirectory: webapp/build
+    files:
+      - '**/*'
