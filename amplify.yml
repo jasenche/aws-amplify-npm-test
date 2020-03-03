@@ -1,32 +1,13 @@
 version: 0.1
 frontend:
   phases:
+    # IMPORTANT - Please verify your build commands
     build:
-      commands:
-        - ls -al
-        - cd webapp
-        - npm install
-        - npm run build
-        - ls -al
-        - cd ..
-        - cp -r webapp/build .
-        - ls -al build
+      commands: []
   artifacts:
-    baseDirectory: build
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /
     files:
       - '**/*'
   cache:
-    paths:
-      - webapp/node_modules/**/*
-test:
-  phases:
-    test:
-      commands:
-        - ls -al
-        - cd webapp
-        - CI=true npm test
-        - ls -al
-  artifacts:
-    baseDirectory: build
-    files:
-      - '**/*'
+    paths: []
