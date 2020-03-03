@@ -21,3 +21,6 @@ test:
       commands:
         - cd webapp
         - CI=true npm test
+  artifacts:
+    # IMPORTANT - Please verify your build output directory.
+    baseDirectory: webapp/build
