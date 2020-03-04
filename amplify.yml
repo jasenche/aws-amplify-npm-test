@@ -7,6 +7,8 @@ frontend:
         - cd webapp
         - npm install
         - npm run build
+        - ls -R
+        - cd ..
   artifacts:
     # IMPORTANT - Please verify your build output directory.
     baseDirectory: webapp/build
@@ -15,15 +17,3 @@ frontend:
   cache:
     paths:
       - 'webapp/node_modules/**/*'
-test:
-  phases:
-    test:
-      commands:
-        - cd webapp
-        - CI=true npm test
-        - rm -fr coverage
-  artifacts:
-    # IMPORTANT - Please verify your build output directory.
-    baseDirectory: webapp/build
-    files:
-      - '**/*'    
